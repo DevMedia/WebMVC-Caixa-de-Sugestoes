@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+        <title>Caixa de sugestões - DevMedia - Plataforma para programadores</title>
+
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/open-iconic/font/css/open-iconic-bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    </head>
+    <body>
+        <header th:fragment="header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" th:href="@{/}"  href="#">Caixa de Sugestões</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" th:href="@{/}" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/suggestion}" href="#">Contribuir</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-4">
+                        <div class="py-5 text-center">
+                            <svg id="logo-devmedia" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 584.52 132.87"
+                                 shape-rendering="geometricPrecision">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #7bac3b;
+                                        }
+
+                                        .cls-2 {
+                                            fill: #484848;
+                                        }
+                                    </style>
+                                </defs>
+                                <title>DevMedia - Plataforma para Programadores</title>
+                                <g id="Layer_2" data-name="Layer 2">
+                                    <g id="Layer_1-2" data-name="Layer 1">
+                                        <g id="_Group_" data-name="<Group>">
+                                            <path id="_Path_" data-name="<Path>" class="cls-1"
+                                                  d="M39.7,61.42,94.78,6.34A66.45,66.45,0,0,0,9.87,31.59Z"></path>
+                                            <path id="_Path_2" data-name="<Path>" class="cls-1"
+                                                  d="M71.3,39.7l55.18,55.18A66.47,66.47,0,0,0,101.19,9.81Z"></path>
+                                            <path id="_Path_3" data-name="<Path>" class="cls-1"
+                                                  d="M93,71.31,37.89,126.44A66.47,66.47,0,0,0,123,101.28Z"></path>
+                                            <path id="_Path_4" data-name="<Path>" class="cls-1"
+                                                  d="M61.42,93l-55-55a66.46,66.46,0,0,0,25.11,85Z"></path>
+                                        </g>
+                                        <path class="cls-2"
+                                              d="M168.68,95.88V38.41h20.88a31.2,31.2,0,0,1,12.34,2.27,24.82,24.82,0,0,1,14.21,15.26,34.27,34.27,0,0,1,1.78,11.13,33.65,33.65,0,0,1-2,11.86A25.34,25.34,0,0,1,210.2,88a25.7,25.7,0,0,1-8.94,5.83,31.58,31.58,0,0,1-11.7,2.06Zm38-28.82a24.48,24.48,0,0,0-1.13-7.61,17,17,0,0,0-3.32-6,14.78,14.78,0,0,0-5.38-3.89,18.18,18.18,0,0,0-7.25-1.38h-9.71V86.08h9.71a17.5,17.5,0,0,0,7.33-1.46,15,15,0,0,0,5.34-4,17.87,17.87,0,0,0,3.28-6A24.19,24.19,0,0,0,206.64,67.06Z"></path>
+                                        <path class="cls-2"
+                                              d="M270.19,86.08v9.79H226.72V38.41h43.47V48.2h-32.3V62h32.3v9.07h-32.3v15Z"></path>
+                                        <path class="cls-2"
+                                              d="M390.26,95.88V46.18l-22,33.77-22-33.77v49.7h-4.13V38.41h4.13l22,34.12,22-34.12h4.13V95.88Z"></path>
+                                        <path class="cls-2"
+                                              d="M448.19,92.15v3.72H408V38.41h39.47v3.72H412.12V64.71h36.07v3.56H412.12V92.15Z"></path>
+                                        <path class="cls-2"
+                                              d="M459.23,95.88V38.41h21.22a29.36,29.36,0,0,1,11.94,2.27,24,24,0,0,1,8.54,6.15,25.77,25.77,0,0,1,5.1,9.11,35.75,35.75,0,0,1,1.7,11.13,34.94,34.94,0,0,1-1.9,11.86A25.58,25.58,0,0,1,500.36,88a24.4,24.4,0,0,1-8.62,5.83,29.64,29.64,0,0,1-11.29,2.06ZM503.6,67.06a31.22,31.22,0,0,0-1.54-10,22.51,22.51,0,0,0-4.49-7.89A20.49,20.49,0,0,0,490.32,44a24.61,24.61,0,0,0-9.87-1.86H463.36v50h17.09a24.65,24.65,0,0,0,10-1.9,19.94,19.94,0,0,0,7.24-5.3,23.18,23.18,0,0,0,4.41-8A31.72,31.72,0,0,0,503.6,67.06Z"></path>
+                                        <path class="cls-2" d="M518.32,95.88V38.41h4.13V95.88Z"></path>
+                                        <path class="cls-2"
+                                              d="M555.84,38.41h3.67l25,57.47H580l-6-13.82-32.8.15-6,13.67h-4.59Zm16.71,39.67L557.67,43.43,542.44,78.24Z"></path>
+                                        <polygon class="cls-2"
+                                                 points="322.35 38.41 304.73 82.9 304.69 82.78 304.64 82.9 287.02 38.41 275.85 38.41 298.27 95.88 304.69 95.88 311.1 95.88 333.52 38.41 322.35 38.41"></polygon>
+                                    </g>
+                                </g>
+                            </svg>
+
+                            <p class="mt-4" id="descricao-pagina">Plataforma para programadores.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small" th:fragment="footer">
+            <p class="mb-1">&copy; 2019 DevMedia - Plataforma para programadores</p>
+
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a th:href="@{/}">Home</a>
+                </li>
+
+                <li class="list-inline-item">
+                    <a th:href="@{/suggestion}">Contribuir</a>
+                </li>
+            </ul>
+
+            <script th:src="@{/js/script.js}"></script>
+            <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+            <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+            <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="template :: head">
+
+    </head>
+    <body>
+        <header th:replace="template :: header">
+
+        </header>
+
+        <main role="main" class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-4">
+                    <form th:action="@{/suggestion}"
+                          th:object="${suggestion}"
+                          action="#"
+                          method="post"
+                    >
+                        <fieldset>
+                            <div class="form-group">
+                                <label th:for="'name'">Nome:</label>
+
+                                <input th:field="*{contact.name}"
+                                       class="form-control"
+                                       type="text"
+                                       placeholder="Aylan Boscarino"
+                                       required="required"
+                                />
+                                <p th:each="err : ${#fields.errors('contact.name')}"
+                                   th:text="${err}"
+                                   class="invalid-feedback"
+                                ></p>
+                            </div>
+
+                            <div class="form-group">
+                                <label th:for="'text'">Sugestão:</label>
+
+                                <textarea th:field="*{text}"
+                                          class="form-control"
+                                          type="text"
+                                          rows="3"
+                                          required="required"
+                                >
+                                </textarea>
+
+                                <p th:each="err : ${#fields.errors('text')}"
+                                   th:text="${err}"
+                                   class="invalid-feedback"
+                                ></p>
+                            </div>
+
+                            <div id="phones-wrapper">
+                                <label>Telefone:</label>
+
+                                <div th:each="phone, status : *{contact.phones}">
+                                    <div class="input-group phones mb-4">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">+55</span>
+                                        </div>
+
+                                        <input th:field="*{contact.phones[__${status.index}__].number}"
+                                               class="form-control"
+                                               type="text"
+                                               required="required"
+                                        />
+                                        <p th:each="err: ${#fields.errors('contact.phones[__${status.index}__].number')}"
+                                           th:text="${err}"
+                                           class="invalid-feedback"
+                                        ></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-dark float-right"
+                                            type="button"
+                                            onclick="createPhone()">
+                                        <span class="oi oi-plus"></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <hr class="mb-4">
+
+                            <button class="btn btn-primary btn-block"
+                                    type="submit">Enviar
+                            </button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer th:replace="template :: footer">
+
+        </footer>
+    </body>
+</html>

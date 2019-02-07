@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="template :: head">
+
+    </head>
+    <body class="bg-light">
+        <header th:replace="template :: header">
+
+        </header>
+
+        <main role="main" class="container">
+            <div class="my-3 p-3 rounded shadow-sm bg-white">
+                <h6 class="border-bottom border-gray pb-2 mb-0">
+                    Atualizações recentes
+                </h6>
+
+                <div th:if="${#lists.isEmpty(suggestions)}">
+                    <p class="text-muted text-center mt-4">Nenhuma sugestão encontrada</p>
+                </div>
+
+                <div th:if="${!#lists.isEmpty(suggestions)}"
+                     th:each="suggestion : ${suggestions}"
+                     class="media text-muted pt-3">
+
+                    <img th:src="@{/assets/avatar/conversation.png}"
+                         alt="avatar"
+                         class="mr-2"
+                    />
+
+                    <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                        <p>
+                            <strong th:text="${suggestion.contact.name}"
+                                    class="text-gray-dark">
+
+                            </strong>
+                        </p>
+
+                        <!--<p th:each="phone, status : ${suggestion.contact.phones}"
+                              th:text="${phone.number} + (${status.size - 1 > status.index} ? ', ' : '')">
+
+                        </p>-->
+
+                        <p th:text="${suggestion.text}"></p>
+
+                        <small th:text="${'Em ' + #dates.day(suggestion.created) + ' de ' + #dates.monthName(suggestion.created)}"
+                               class="d-block text-muted text-right">
+
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer th:replace="template :: footer">
+
+        </footer>
+    </body>
+</html>

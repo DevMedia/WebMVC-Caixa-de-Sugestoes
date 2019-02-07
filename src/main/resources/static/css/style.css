@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+#logo-devmedia {
+    width: 80%;
+}
+
+#descricao-pagina {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.invalid-feedback {
+    display: block;
+    width: 100%;
+}
