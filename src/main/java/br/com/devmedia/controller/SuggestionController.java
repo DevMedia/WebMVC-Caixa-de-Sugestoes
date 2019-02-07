@@ -38,7 +38,7 @@ public class SuggestionController implements WebMvcConfigurer {
 
         model.addAttribute("suggestions", suggestions);
 
-        return "/suggestion/list";
+        return "suggestion/list";
     }
 
     @GetMapping("suggestion")
