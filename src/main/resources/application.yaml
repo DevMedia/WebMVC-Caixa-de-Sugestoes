@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/livecode?createDatabaseIfNotExist=true
-    username: root
-    password: 123456
+    url: jdbc:mysql://us-cdbr-iron-east-03.cleardb.net/heroku_eb3ec026f66e354?reconnect=true
+    username: bbd1ca985a75ae
+    password: b3270a98
 
   jpa:
     hibernate:
