@@ -2,6 +2,8 @@
 
 Ao obter o código dessa aplicação você terá à sua disposição exemplos de como configurar uma aplicação Spring Boot com os frameworks Spring Framework, Spring MVC, usando como motor de templates o Thymeleaf, bem como o Spring Data JPA.
 
+Confira uma explicação completa desse código e o passo a passo para criar essa aplicação em https://www.devmedia.com.br/primeiros-passos-java/.
+
 ## Destaques do projeto
 
 * Spring Boot
@@ -84,22 +86,22 @@ heroku open
 
 ## Glossário
 
-####Spring Boot
+#### Spring Boot
 
 O Spring Boot é uma ferramenta para o desenvolvimento de aplicações que utilizam o framework Spring sem que seja necessária praticamente nenhuma configuração.
 
-####Spring Framework
+#### Spring Framework
 
 Esse framework implementa um grande número de funções, como injeção de dependência, persistência de dados e uma implementação para o padrão MVC para a criação de aplicações WEB.
 
-####Spring MVC
+#### Spring MVC
 
 O Framework Spring MVC é um framework web MVC desenvolvido pela Spring Source e de código aberto. Ele é projetado em torno de um Servlet, o DispatcherServlet, que despacha pedidos para os controladores. Um controlador padrão do Spring MVC faz uso das anotações @Controller e @RequestMapping, que oferecem uma ampla gama de recursos flexíveis para manipulação das requisições.
 
-####Spring Data JPA
+#### Spring Data JPA
 
 Spring Data JPA simplifica o desenvolvimento de projetos que envolvam operações entre objetos e dados de uma tabela.
 
-####Bean Validation
+#### Bean Validation
 
 A garantia de que os dados sejam utilizados de forma correta e as regras sobre estes permaneçam consistentes para uma eficaz utilização das aplicações computacionais, sempre foram um desafio para os programadores. Com a chegada da JSR 303, conhecida como Bean Validation, os programadores Java passaram a ter um rápido recurso de validação e controle sobre os dados utilizados nas aplicações, mantendo o código claro e enxuto.
