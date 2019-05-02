@@ -2,7 +2,7 @@
 
 Ao obter o código dessa aplicação você terá à sua disposição exemplos de como configurar uma aplicação Spring Boot com os frameworks Spring Framework, Spring MVC, usando como motor de templates o Thymeleaf, bem como o Spring Data JPA.
 
-Confira uma explicação completa desse código e o passo a passo para criar essa aplicação em https://www.devmedia.com.br/primeiros-passos-java/.
+Confira uma explicação completa desse código e o passo a passo para criar essa aplicação em https://www.devmedia.com.br/primeiros-passos-java/
 
 ## Destaques do projeto
 
